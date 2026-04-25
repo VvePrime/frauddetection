@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/risk_db
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+jpa:
+  database-platform: org.hibernate.dialect.MySQLDialect
+  hibernate:
+    # 'update' will automatically create/update tables based on your @Entity classes
+    ddl-auto: update
+  show-sql: true
+  properties:
+    hibernate:
+      format_sql: true
+
+# Monitoring the parallel execution
+logging:
+  level:
+    com.yourpackage.RiskOrchestrator: DEBUG
