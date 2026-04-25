@@ -99,7 +99,7 @@ CREATE TABLE users (
 -- 3. Create Transaction Table
 -- Matches your provided Entity structure
 CREATE TABLE transactions (
-    transaction_id VARCHAR(50) PRIMARY KEY,
+    transaction_id BIGINT AUTO_INCREMENT PRIMARY KEY,
     user_id BIGINT NOT NULL,
     amount DOUBLE NOT NULL,
     latitude DOUBLE NOT NULL,
